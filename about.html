@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Caprasimo&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+       body {
+            margin: 0;
+            min-height: 100vh; /* Use min-height instead of height for better content adaptability */
+            background: linear-gradient(45deg, #ff9a9e, #a18cd1, #f6d365, #84fab0, #4163b3);
+            background-size: 300% 300%;
+            animation: gradientShift 12s ease infinite;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 50%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .descab {
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed for header clearance */
+        }
+        .descab h1 {
+            font-family: "cal sans", sans-serif;
+            font-size: 3em; /* Use em for scalable font sizes */
+            color: white;
+            margin-bottom: 20px;
+        }
+        .descab p {
+            font-family: "cal sans", sans-serif;
+            font-size: 1.2em;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .descab p:hover {
+            color: #000;
+            text-shadow: 0 0 15px red, 0 0 30px rgba(0, 13, 255, 0.6);
+            transition: transform 3s ease-in-out, color 3s ease-in-out, text-shadow 3s ease-in-out;
+        }
+        .Header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background:  linear-gradient(90deg, #000dff37, #ee09782f);
+            border-radius: 4px;
+        }
+        .navlinks ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 3px;
+        }
+        .navlinks ul li {
+            margin: 0 15px;
+        }
+        .navlinks ul li a {
+            font-family: cal sans, sans-serif;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            padding: 20px;
+            margin-top: 30px; /* Space from the description */
+            border: 2px solid rgba(255, 255, 255, 0.356);
+            border-radius: 9px;
+            max-width: 90%; /* Adjust width for responsiveness */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pic ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap; /* Allow list items to wrap */
+            justify-content: center;
+        }
+        .pic ul li {
+            margin: 10px 20px; /* Adjust margin for spacing between icons */
+        }
+        .pic ul li img {
+            width: 50px; /* Fixed size for icons */
+            height: 50px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .pic ul li img:hover {
+            box-shadow: 0 0 15px red, 0 0 30px rgba(0, 13, 255, 0.6);
+            border-radius: 5px;
+        }
+        .foot {
+            position: relative; /* Change to relative or remove position if not needed to be fixed */
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 100;
+            margin-top: 40px; /* Push footer down if content is short */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .descab h1 {
+                font-size: 2.5em;
+            }
+            .descab p {
+                font-size: 1em;
+            }
+            .navlinks ul li {
+                margin: 0 10px;
+            }
+            .navlinks ul li a {
+                font-size: 18px;
+            }
+            .pic ul li {
+                margin: 8px 15px;
+            }
+            .pic ul li img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .descab h1 {
+                font-size: 2em;
+            }
+            .descab p {
+                font-size: 0.9em;
+            }
+            .navlinks ul {
+                flex-direction: column; /* Stack navigation links */
+                align-items: center;
+            }
+            .navlinks ul li {
+                margin: 5px 0;
+            }
+            .navlinks ul li a {
+                font-size: 16px;
+            }
+            .pic ul li {
+                margin: 5px 10px;
+            }
+            .pic ul li img {
+                width: 35px;
+                height: 35px;
+            }
+            .pic {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<header>
+    <div class="Header">
+        <div class="navlinks">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="descab">
+        <h1>About me</h1>
+        <p>I'm a passionate and detail-oriented Full-Stack Developer with a strong foundation in both front-end and back-end technologies. On the front end, I specialize in building responsive, dynamic user interfaces using HTML5, CSS3, JavaScript, and React.js. My designs prioritize user experience, accessibility, and performance.
+
+        On the back end, I’m proficient in Java for developing robust server-side applications, and I use MySQL for efficient data management and database architecture. I enjoy solving real-world problems through clean, scalable code and collaborating on meaningful projects.
+
+        Whether it’s designing an intuitive user interface or building a secure backend system, I bring a balanced approach to every project. I’m always eager to learn, grow, and take on new challenges that push my skills further.</p>
+    </div>
+    <div class="pic">
+      <ul>
+        <li><img src="imgae/icons8-html5-50.png" alt="HTML5"></li>
+        <li><img src="imgae/icons8-css3-50.png" alt="CSS3"></li>
+        <li><img src="imgae/icons8-javascript-50.png" alt="JavaScript"></li>
+        <li><img src="imgae/icons8-ui-ux-design-50.png" alt="UI/UX Design"></li>
+        <li><img src="imgae/icons8-react-native-68.png" width="50px" alt="React Native"></li>
+        <li><img src="imgae/icons8-sql-database-administrators-48.png" alt="SQL Database"></li>
+        <li><img src="imgae/icons8-java-50.png" alt="Java"></li>
+      </ul>
+    </div>
+</body>
+<footer>
+    <div class="foot">
+        <p>Gbeminiyi Ogunleye &copy; All rights reserved</p>
+        <p id="year"></p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </div>
+</footer>
+</html>

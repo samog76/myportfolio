@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    min-height: 100vh; /* Use min-height to allow content to expand */
+    background: linear-gradient(45deg, #dd8588, #7c5fc0, #44b7a9, #29507d, #4163b3);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex; /* Use flexbox for overall layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background:  linear-gradient(90deg, #000dff37, #ee09782f);
+    border-radius: 4px;
+    width: 100%; /* Ensure header spans full width */
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.navlinks ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    flex-wrap: wrap; /* Allow navigation links to wrap */
+    justify-content: center;
+}
+
+.navlinks ul li {
+    margin: 0 15px;
+}
+
+.navlinks ul li a {
+    font-family: cal sans, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap; /* Prevent text from wrapping prematurely */
+}
+
+.homepik {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the image horizontally */
+    overflow: hidden;
+    flex-grow: 1; /* Allow this section to take up available space */
+    padding-top: 50px; /* Space for fixed header */
+     animation: slideInFromBottom 1s ease-out ;
+}
+
+.homepik img {
+    width: 100%; /* Make image responsive */
+    max-width: 800px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: contain; /* Ensure the image fits within its container */
+    z-index: 1;
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%); /* Start completely below its original position */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateY(0); /* End at its original position */
+        opacity: 1; /* End fully visible */
+    }
+}
+.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(0, 0, 0, 0.8) 70%,
+        black 85%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.name {
+    position: absolute;
+    top: 38%; /* Adjusted for better centering */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: cal sans, sans-serif;
+    font-size: 4vw; /* Use viewport width for font size */
+    width: 90%; /* Ensure it fits on smaller screens */
+    z-index: 0; /* Bring to front */
+    transition: z-index 0.01s ease-in-out; /* Small transition for z-index change */
+
+}
+.home-section:hover .name {
+    z-index: 4; 
+}
+.name h1 {
+    text-shadow: 0 0 10px rgba(51, 51, 51, 0.8), 0 0 20px rgba(51, 51, 51, 0.6) !important;
+    
+}
+
+
+.deschome {
+    position: absolute;
+    bottom: -40%; /* Position from bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center;
+    color: black;
+    font-family: cal sans, sans-serif;
+    font-size: 2.5vw; /* Responsive font size */
+    z-index: 3;
+    padding: 10px 20px;
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Limit max width */
+    border-radius: 19px;
+    background-color: rgba(255, 255, 255, 0.619);
+    transition: all 0.5s ease-in-out;
+}
+
+.more {
+    position: absolute;
+    bottom: 5%; /* Position below deschome */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-family: cal sans, sans-serif;
+}
+
+.more a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.more a:hover {
+    background-color: white;
+}
+
+.foot {
+    position: relative; /* Changed to relative for flow */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+    color: #fff;
+    box-shadow: 2px 2px 3px #ccc;
+    z-index: 100; /* Ensure footer is above other content */
+    margin-top: auto; /* Push footer to the bottom */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and small desktops */
+@media (max-width: 768px) {
+    .navlinks ul li {
+        margin: 0 10px;
+    }
+    .navlinks ul li a {
+        font-size: 18px;
+    }
+    .name {
+        font-size: 6vw; /* Adjust font size for tablets */
+    }
+    .deschome {
+        font-size: 4vw; /* Adjust font size for tablets */
+        bottom: 12%; /* Reposition */
+    }
+    .more {
+        bottom: 7%; /* Reposition */
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .navlinks ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: center;
+    }
+    .navlinks ul li {
+        margin: 5px 0;
+    }
+    .navlinks ul li a {
+        font-size: 16px;
+    }
+    .name {
+        font-size: 8vw; /* Further adjust for phones */
+        top: 45%; /* Adjust vertical position */
+    }
+    .deschome {
+        font-size: 6vw; /* Further adjust for phones */
+        bottom: 15%; /* Reposition */
+        width: 90%; /* Wider on small screens */
+        padding: 8px 15px;
+    }
+    .more {
+        bottom: 8%; /* Reposition */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .more a {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+    .foot {
+        height: 80px; /* Smaller footer on phones */
+        padding: 8px 0;
+    }
+    .foot p {
+        font-size: 0.8em;
+    }
+}
