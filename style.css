@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 70px;
     background:  linear-gradient(90deg, #000dff37, #ee09782f);
     border-radius: 4px;
     width: 100%; /* Ensure header spans full width */
