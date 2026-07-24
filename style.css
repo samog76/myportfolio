@@ -18,6 +18,16 @@
 .work{color:var(--work-ink);background:var(--work-bg)}
 .work-heading .section-title em{-webkit-text-stroke-color:var(--work-ink)}
 .project-meta p{max-width:680px;line-height:1.65}
+.project-screenshot{background:#0d151d}
+.project-screenshot:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,7,.02) 45%,rgba(3,8,7,.82) 100%);pointer-events:none}
+.project-shot{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .45s ease}
+.project:hover .project-shot{transform:scale(1.025)}
+.project-visual-name{position:absolute;left:20px;bottom:18px;z-index:3;color:#fff;font:600 13px var(--display);letter-spacing:.04em}
+.project-count{display:grid;place-items:center;min-width:36px;height:28px;padding:0 10px;border-radius:100px;color:#07110f;background:rgba(241,239,232,.92);backdrop-filter:blur(10px)}
+.project-arrow{color:#07110f!important;background:#f1efe8!important}
+.code-chip,.all-work-link i{color:#07110f!important}
+.contact-email{color:#edf7f1!important;background:#07110f!important}
+.skill:hover{background:var(--surface)}
 .about,.work,.contact,.site-header,.skill,.theme-toggle{transition:background-color .45s ease,color .45s ease,border-color .45s ease}
 [data-theme="dark"] .portrait-card{background:linear-gradient(155deg,#225344,#173b32 70%,#0e241f);box-shadow:0 38px 80px rgba(0,0,0,.48)}
 [data-theme="dark"] .portrait-card img{filter:saturate(.78) contrast(1.08) brightness(.92)}
@@ -29,7 +39,8 @@
 [data-theme="dark"] .contact .section-number{border-color:rgba(7,17,15,.25)}
 [data-theme="dark"] .contact h2 em{-webkit-text-stroke-color:#07110f}
 [data-theme="dark"] .contact .eyebrow span{background:#07110f;box-shadow:0 0 0 5px rgba(7,17,15,.12)}
-[data-theme="dark"] .contact-email{color:#edf7f1}
+[data-theme="dark"] .contact-email{color:#edf7f1;background:#07110f}
+[data-theme="dark"] .project-shot{filter:saturate(.9) brightness(.88)}
 
 @media(max-width:900px){
   .header-actions{position:absolute;right:58px}
