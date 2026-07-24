@@ -48,14 +48,19 @@ const person = {
   "@type": "Person",
   "@id": `${siteUrl}/#person`,
   name: "Gbeminiyi Ogunleye",
+  givenName: "Gbeminiyi",
+  familyName: "Ogunleye",
+  alternateName: ["samog76", "Gbeminiyi"],
   url: `${siteUrl}/`,
   image: `${siteUrl}/imgae/hero-portrait.webp`,
   jobTitle: "Full-Stack Developer",
+  description: "Gbeminiyi Ogunleye is a full-stack developer based in Lagos, Nigeria, building modern web applications and digital products.",
   sameAs: [
     "https://github.com/samog76",
     "https://www.linkedin.com/in/gbeminiyi-ogunleye-245163228",
     "https://twitter.com/gbeminiyi_og",
-    "https://www.instagram.com/ufw._niyi"
+    "https://www.instagram.com/ufw._niyi",
+    "https://linktr.ee/gbeminiyi76"
   ]
 };
 
@@ -104,7 +109,9 @@ function projectSchema(project) {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: `${siteUrl}/`,
-        name: "Gbeminiyi",
+        name: "Gbeminiyi Ogunleye",
+        alternateName: ["Gbeminiyi", "Gbeminiyi Ogunleye Portfolio"],
+        publisher: { "@id": `${siteUrl}/#person` },
         inLanguage: "en-NG"
       },
       person

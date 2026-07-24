@@ -118,8 +118,12 @@ function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-copy">
+        <div className="hero-identity">
+          <h1>Gbeminiyi Ogunleye</h1>
+          <p>Full-Stack Developer · Lagos, Nigeria</p>
+        </div>
         <p className="eyebrow"><span></span> Available for meaningful projects</p>
-        <h1 className="hero-title">I build digital<span className="title-indent">experiences that</span><em>feel alive.</em></h1>
+        <h2 className="hero-title">I build digital<span className="title-indent">experiences that</span><em>feel alive.</em></h2>
         <p className="hero-intro reveal">Full-stack developer with an eye for the small details—turning complex ideas into fast, intuitive products.</p>
         <div className="hero-actions reveal"><a className="button button-primary" href="#work">Explore my work <span>↘</span></a><a className="text-link" href="#about">More about me <span>→</span></a></div>
       </div>
@@ -144,7 +148,7 @@ function About() {
       <div className="section-number reveal">01 / About</div>
       <div className="about-content">
         <h2 className="section-title reveal">Curious by nature.<br /><em>Precise by craft.</em></h2>
-        <div className="about-copy reveal"><p className="lead">I’m Gbeminiyi, a full-stack developer who enjoys making technology feel simple, useful, and human.</p><p>I work across the full product stack—from expressive, accessible interfaces to dependable backends and databases. I care about clean systems, considered motion, performance, and the kind of polish people can feel even when they can’t name it.</p><p>I’m always learning, experimenting, and looking for ambitious problems worth solving.</p><a className="text-link" href="https://github.com/samog76" target="_blank" rel="noreferrer">See how I build on GitHub <span>↗</span></a></div>
+        <div className="about-copy reveal"><p className="lead">I’m Gbeminiyi Ogunleye, a full-stack developer in Lagos who enjoys making technology feel simple, useful, and human.</p><p>I work across the full product stack—from expressive, accessible interfaces to dependable backends and databases. I care about clean systems, considered motion, performance, and the kind of polish people can feel even when they can’t name it.</p><p>I’m always learning, experimenting, and looking for ambitious problems worth solving.</p><a className="text-link" href="https://github.com/samog76" target="_blank" rel="me noreferrer">See how I build on GitHub <span>↗</span></a></div>
       </div>
       <div className="capabilities reveal"><div className="capability-intro"><span className="mono-label">Core stack</span><p>Tools I use to move from idea to shipped product.</p></div><div className="skill-list">{skills.map(([name, type], i) => <div className="skill" key={name}><span>{String(i + 1).padStart(2, "0")}</span><strong>{name}</strong><i>{type}</i></div>)}</div></div>
     </section>
@@ -177,7 +181,7 @@ function Contact() {
     <section id="contact" className="contact section-shell">
       <div className="contact-orb" aria-hidden="true"></div><div className="section-number reveal">03 / Contact</div>
       <div className="contact-copy"><p className="eyebrow reveal"><span></span> Open to opportunities</p><h2 className="reveal">Have an idea?<br /><em>Let’s make it real.</em></h2><p className="reveal">Whether it’s a product, a collaboration, or just a good conversation—I’d love to hear from you.</p><a className="contact-email reveal" href="mailto:theonlysam08@gmail.com"><span>theonlysam08@gmail.com</span><i>↗</i></a></div>
-      <footer><div className="footer-brand">Gbeminiyi<span>.</span></div><div className="footer-links"><a href="https://github.com/samog76" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linktr.ee/gbeminiyi76" target="_blank" rel="noreferrer">Linktree ↗</a></div><p>© {new Date().getFullYear()} Gbeminiyi Ogunleye</p><a href="#top" className="back-top">Back to top ↑</a></footer>
+      <footer><div className="footer-brand">Gbeminiyi<span>.</span></div><div className="footer-links"><a href="https://github.com/samog76" target="_blank" rel="me noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/gbeminiyi-ogunleye-245163228" target="_blank" rel="me noreferrer">LinkedIn ↗</a><a href="https://twitter.com/gbeminiyi_og" target="_blank" rel="me noreferrer">X ↗</a><a href="https://linktr.ee/gbeminiyi76" target="_blank" rel="me noreferrer">Linktree ↗</a></div><p>© {new Date().getFullYear()} Gbeminiyi Ogunleye</p><a href="#top" className="back-top">Back to top ↑</a></footer>
     </section>
   );
 }
