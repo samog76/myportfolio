@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const projects = [
-  { id: "01", name: "Movway", description: "Movement and mobility platform", href: "https://movway.netlify.app/", type: "movway", tags: ["TypeScript", "Product", "2026"] },
-  { id: "02", name: "RX Prototype", description: "Healthcare product concept", href: "https://r-xprototype.vercel.app", type: "rx", tags: ["TypeScript", "Prototype"] },
-  { id: "03", name: "Sentinel", description: "Intelligent monitoring experience", href: "https://sentinel-lyart.vercel.app", type: "sentinel", tags: ["TypeScript", "Web app"] }
+  { id: "01", name: "Movway", description: "A TMDB-powered movie, TV, and anime streaming experience with discovery, search, continue-watching, subtitles, and multiple playback providers.", href: "https://movway.netlify.app/", type: "movway", tags: ["React", "TMDB", "Streaming"] },
+  { id: "02", name: "Riba-X", description: "A full-stack social-commerce platform that combines feeds, profiles, messaging, and creator posts with a marketplace, cart, Stripe checkout, and seller tools.", href: "https://r-xprototype.vercel.app", type: "rx", tags: ["Next.js", "NestJS", "PostgreSQL"] },
+  { id: "03", name: "Sentinel", description: "An AI clinical companion for medical professionals that measures cognitive baselines and shift fatigue through reaction, memory, and typing tests with Gemini-powered feedback.", href: "https://sentinel-lyart.vercel.app", type: "sentinel", tags: ["Next.js", "Gemini AI", "HealthTech"] }
 ];
 
 const skills = [
@@ -11,7 +11,7 @@ const skills = [
   ["Java", "Backend"], ["MySQL", "Data"], ["UI / UX", "Experience"]
 ];
 
-function Header() {
+function Header({ theme, toggleTheme }) {
   const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
@@ -20,7 +20,13 @@ function Header() {
       <nav id="site-nav" className={`site-nav${open ? " open" : ""}`} aria-label="Main navigation">
         {["about", "work", "contact"].map((item) => <a key={item} href={`#${item}`} onClick={() => setOpen(false)}>{item === "work" ? "Selected work" : item[0].toUpperCase() + item.slice(1)}</a>)}
       </nav>
-      <a className="header-cta" href="mailto:theonlysam08@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+      <div className="header-actions">
+        <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
+          <span className="theme-icon" aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+          <span className="theme-label">{theme === "dark" ? "Light" : "Dark"}</span>
+        </button>
+        <a className="header-cta" href="mailto:theonlysam08@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
   );
 }
@@ -89,6 +95,15 @@ function Contact() {
 }
 
 export default function App() {
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || "light");
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem("gbeminiyi-theme", next);
+    setTheme(next);
+  };
+
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
@@ -116,5 +131,5 @@ export default function App() {
     return () => { observer.disconnect(); window.removeEventListener("pointermove", moveGlow); cleanups.forEach((clean) => clean()); };
   }, []);
 
-  return <><div className="noise" aria-hidden="true"></div><div className="cursor-glow" aria-hidden="true"></div><Header /><main id="top"><Hero /><Marquee /><About /><Work /><Contact /></main></>;
+  return <><div className="noise" aria-hidden="true"></div><div className="cursor-glow" aria-hidden="true"></div><Header theme={theme} toggleTheme={toggleTheme} /><main id="top"><Hero /><Marquee /><About /><Work /><Contact /></main></>;
 }
