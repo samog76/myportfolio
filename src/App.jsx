@@ -118,8 +118,8 @@ function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-copy">
-        <p className="eyebrow reveal"><span></span> Available for meaningful projects</p>
-        <h1 className="hero-title reveal">I build digital<span className="title-indent">experiences that</span><em>feel alive.</em></h1>
+        <p className="eyebrow"><span></span> Available for meaningful projects</p>
+        <h1 className="hero-title">I build digital<span className="title-indent">experiences that</span><em>feel alive.</em></h1>
         <p className="hero-intro reveal">Full-stack developer with an eye for the small details—turning complex ideas into fast, intuitive products.</p>
         <div className="hero-actions reveal"><a className="button button-primary" href="#work">Explore my work <span>↘</span></a><a className="text-link" href="#about">More about me <span>→</span></a></div>
       </div>
