@@ -7,8 +7,33 @@ const projects = [
 ];
 
 const skills = [
-  ["HTML / CSS", "Interface"], ["JavaScript / TypeScript", "Logic"], ["React", "Product"],
-  ["Java", "Backend"], ["MySQL", "Data"], ["UI / UX", "Experience"]
+  ["HTML", "Markup"],
+  ["CSS", "Styling"],
+  ["JavaScript", "Logic"],
+  ["TypeScript", "Logic"],
+  ["React", "Frontend"],
+  ["Angular", "Frontend"],
+  ["Bootstrap", "UI framework"],
+  ["Node.js", "Backend"],
+  ["Java", "Backend"],
+  ["Python", "Backend"],
+  ["PHP", "Backend"],
+  ["Ruby", "Backend"],
+  ["C", "Systems"],
+  ["C++", "Systems"],
+  ["C#", "Applications"],
+  ["MySQL", "Database"],
+  ["PostgreSQL", "Database"],
+  ["MongoDB", "Database"],
+  ["Flutter", "Mobile"],
+  ["React Native", "Mobile"],
+  ["Docker", "DevOps"],
+  ["Nginx", "Infrastructure"],
+  ["Hadoop", "Big data"],
+  ["Figma", "Product design"],
+  ["Framer", "Prototyping"],
+  ["Photoshop", "Visual design"],
+  ["UI / UX", "Experience"]
 ];
 
 function Header({ theme, toggleTheme }) {
