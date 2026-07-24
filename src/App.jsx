@@ -42,7 +42,7 @@ function Hero() {
       </div>
       <div className="portrait-stage reveal" data-tilt>
         <div className="orbit orbit-one"></div><div className="orbit orbit-two"></div><div className="portrait-halo"></div>
-        <div className="portrait-card"><div className="portrait-grid"></div><img src="/imgae/hiiiiiiii.png" alt="Portrait of Gbeminiyi Ogunleye" /><div className="portrait-label"><span>Based in</span><strong>Lagos, NG</strong></div><div className="code-chip">&lt;build /&gt;</div></div>
+        <div className="portrait-card"><div className="portrait-grid"></div><img src="/imgae/hero-portrait.jpg" alt="Portrait of Gbeminiyi Ogunleye" /><div className="portrait-label"><span>Based in</span><strong>Lagos, NG</strong></div><div className="code-chip">&lt;build /&gt;</div></div>
         <div className="floating-orb orb-a"></div><div className="floating-orb orb-b"></div>
       </div>
       <div className="hero-foot reveal"><span className="scroll-cue"><i></i> Scroll to discover</span><span className="hero-index">Portfolio / 2026</span></div>
