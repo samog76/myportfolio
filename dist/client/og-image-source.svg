@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(975 125) rotate(137) scale(620 520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D7059"/>
+      <stop offset=".58" stop-color="#102A23"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#B7FBD6" stroke-opacity=".075"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1062" cy="112" r="188" fill="none" stroke="#B7FBD6" stroke-opacity=".18"/>
+  <circle cx="1062" cy="112" r="126" fill="none" stroke="#C6FF3D" stroke-opacity=".22"/>
+  <circle cx="1050" cy="110" r="18" fill="#FF6D55"/>
+  <g transform="translate(72 66)">
+    <circle cx="28" cy="28" r="28" fill="#F1EFE8"/>
+    <text x="28" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#07110F">G</text>
+    <text x="72" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F1EFE8">Gbeminiyi.</text>
+  </g>
+  <text x="72" y="216" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="5" fill="#C6FF3D">FULL-STACK DEVELOPER · LAGOS</text>
+  <text x="72" y="310" font-family="Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-4" fill="#F1EFE8">I build digital</text>
+  <text x="72" y="397" font-family="Arial, sans-serif" font-size="82" font-weight="700" letter-spacing="-4" fill="#F1EFE8">experiences</text>
+  <text x="72" y="484" font-family="Arial, sans-serif" font-size="82" font-weight="700" font-style="italic" letter-spacing="-4" fill="none" stroke="#F1EFE8" stroke-width="2">that feel alive.</text>
+  <rect x="72" y="553" width="370" height="2" fill="#B7FBD6" fill-opacity=".45"/>
+  <text x="72" y="588" font-family="monospace" font-size="18" letter-spacing="2" fill="#B7FBD6">GBEMINIYI.ME</text>
+  <circle cx="1126" cy="568" r="16" fill="#C6FF3D"/>
+</svg>

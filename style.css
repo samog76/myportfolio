@@ -43,8 +43,63 @@
 [data-theme="dark"] .contact-email{color:#edf7f1;background:#07110f}
 [data-theme="dark"] .project-shot{filter:saturate(.9) brightness(.88)}
 
+/* Project case studies */
+.case-page{min-height:100svh;background:var(--paper)}
+.case-hero{padding-top:150px;padding-bottom:80px}
+.case-back{display:inline-flex;margin-bottom:65px;padding-bottom:5px;border-bottom:1px solid var(--line);color:var(--muted);font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.case-hero h1{margin:28px 0 22px;font:700 clamp(82px,14vw,220px)/.78 var(--display);letter-spacing:-.08em}
+.case-summary{max-width:790px;margin:0;color:var(--muted);font-size:clamp(18px,2vw,27px);line-height:1.55;letter-spacing:-.02em}
+.case-actions{display:flex;align-items:center;gap:28px;margin-top:38px}
+.case-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:58px;padding-top:22px;border-top:1px solid var(--line)}
+.case-tags span{padding:7px 11px;border:1px solid var(--line);border-radius:100px;color:var(--muted);font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.case-media{padding-bottom:105px}
+.case-media img{display:block;width:100%;max-height:760px;object-fit:cover;object-position:top center;border-radius:12px;background:#0d151d;box-shadow:0 35px 70px rgba(7,17,15,.17)}
+.case-content{padding-top:95px;padding-bottom:130px;border-top:1px solid var(--line)}
+.case-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:120px}
+.case-facts div{display:flex;flex-direction:column;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.case-facts span{color:var(--muted);font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.case-facts strong{font:600 clamp(16px,1.5vw,22px) var(--display)}
+.case-overview{display:grid;grid-template-columns:.55fr 1.45fr;gap:60px}
+.case-overview .mono-label{padding-top:10px}
+.case-overview h2{margin:0;font:600 clamp(44px,6vw,88px)/.95 var(--display);letter-spacing:-.055em}
+.case-overview p{grid-column:2;max-width:720px;margin:5px 0 0;color:var(--muted);font-size:18px;line-height:1.8}
+.case-highlights{display:grid;grid-template-columns:.55fr 1.45fr;gap:60px;margin-top:120px;padding-top:35px;border-top:1px solid var(--line)}
+.case-highlights>div{display:grid;grid-template-columns:1fr 1fr}
+.case-highlights article{min-height:175px;padding:22px 26px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-highlights article span{color:var(--muted);font:500 9px var(--mono)}
+.case-highlights article p{margin:45px 0 0;font:600 clamp(17px,1.6vw,24px)/1.35 var(--display)}
+.case-next{padding-top:90px;padding-bottom:90px;color:var(--work-ink);background:var(--work-bg)}
+.case-next p{color:#9ba39f;font:500 10px var(--mono);text-transform:uppercase;letter-spacing:.12em}
+.case-next a{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)}
+.case-next a span{font:600 clamp(52px,9vw,128px)/.9 var(--display);letter-spacing:-.06em}
+.case-next a i{display:grid;place-items:center;width:66px;height:66px;border-radius:50%;color:#07110f;background:var(--lime);font-style:normal;font-size:24px}
+.case-footer{color:var(--work-ink);background:var(--work-bg)}
+
 @media(max-width:900px){
   .header-actions{position:absolute;right:58px}
   .theme-label{display:none}
   .theme-toggle{width:40px;padding:0;justify-content:center}
+  .case-overview,.case-highlights{grid-template-columns:1fr}
+  .case-overview p{grid-column:1}
+  .case-highlights{gap:30px}
+}
+
+@media(max-width:640px){
+  .case-hero{padding-top:115px;padding-bottom:60px}
+  .case-back{margin-bottom:45px}
+  .case-hero h1{font-size:clamp(72px,24vw,118px)}
+  .case-actions{align-items:flex-start;flex-direction:column;gap:22px}
+  .case-tags{margin-top:42px}
+  .case-media{padding-bottom:75px}
+  .case-media img{min-height:310px}
+  .case-content{padding-top:70px;padding-bottom:90px}
+  .case-facts{grid-template-columns:1fr;margin-bottom:85px}
+  .case-overview h2{font-size:clamp(42px,13vw,64px)}
+  .case-overview p{font-size:16px}
+  .case-highlights{margin-top:85px}
+  .case-highlights>div{grid-template-columns:1fr}
+  .case-highlights article{min-height:145px;padding-left:0;border-left:0}
+  .case-highlights article p{margin-top:32px}
+  .case-next a i{width:50px;height:50px}
+  .case-footer{grid-template-columns:1fr;gap:18px}
 }
