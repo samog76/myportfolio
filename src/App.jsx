@@ -25,7 +25,7 @@ function Header({ theme, toggleTheme }) {
           <span className="theme-icon" aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
           <span className="theme-label">{theme === "dark" ? "Light" : "Dark"}</span>
         </button>
-        <a className="header-cta" href="mailto:theonlysam08@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href="mailto:gbeminiyiog@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
       </div>
     </header>
   );
