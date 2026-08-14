@@ -85,8 +85,6 @@ const skills = [
   ["Flutter", "Mobile"],
   ["React Native", "Mobile"],
   ["Docker", "DevOps"],
-  ["Nginx", "Infrastructure"],
-  ["Hadoop", "Big data"],
   ["Figma", "Product design"],
   ["Framer", "Prototyping"],
   ["Photoshop", "Visual design"],
