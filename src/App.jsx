@@ -93,7 +93,7 @@ function Contact() {
   return (
     <section id="contact" className="contact section-shell">
       <div className="contact-orb" aria-hidden="true"></div><div className="section-number reveal">03 / Contact</div>
-      <div className="contact-copy"><p className="eyebrow reveal"><span></span> Open to opportunities</p><h2 className="reveal">Have an idea?<br /><em>Let’s make it real.</em></h2><p className="reveal">Whether it’s a product, a collaboration, or just a good conversation—I’d love to hear from you.</p><a className="contact-email reveal" href="mailto:theonlysam08@gmail.com"><span>theonlysam08@gmail.com</span><i>↗</i></a></div>
+      <div className="contact-copy"><p className="eyebrow reveal"><span></span> Open to opportunities</p><h2 className="reveal">Have an idea?<br /><em>Let’s make it real.</em></h2><p className="reveal">Whether it’s a product, a collaboration, or just a good conversation—I’d love to hear from you.</p><a className="contact-email reveal" href="mailto:gbeminiyiog@gmail.com"><span>gbeminiyiog@gmail.com</span><i>↗</i></a></div>
       <footer><div className="footer-brand">Gbeminiyi<span>.</span></div><div className="footer-links"><a href="https://github.com/samog76" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linktr.ee/gbeminiyi76" target="_blank" rel="noreferrer">Linktree ↗</a></div><p>© {new Date().getFullYear()} Gbeminiyi Ogunleye</p><a href="#top" className="back-top">Back to top ↑</a></footer>
     </section>
   );
