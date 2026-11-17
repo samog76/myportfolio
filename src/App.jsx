@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 const projects = [
   { id: "01", name: "Movway", description: "A TMDB-powered movie, TV, and anime streaming experience with discovery, search, continue-watching, subtitles, and multiple playback providers.", href: "https://movway.netlify.app/", image: "/imgae/projects/movway.png", tags: ["React", "TMDB", "Streaming"] },
   { id: "02", name: "Riba-X", description: "A full-stack social-commerce platform that combines feeds, profiles, messaging, and creator posts with a marketplace, cart, Stripe checkout, and seller tools.", href: "https://r-xprototype.vercel.app", image: "/imgae/projects/riba-x.png", tags: ["Next.js", "NestJS", "PostgreSQL"] },
-  { id: "03", name: "Sentinel", description: "An AI clinical companion for medical professionals that measures cognitive baselines and shift fatigue through reaction, memory, and typing tests with Gemini-powered feedback.", href: "https://sentinel-lyart.vercel.app", image: "/imgae/projects/sentinel.png", tags: ["Next.js", "Gemini AI", "HealthTech"] }
+  { id: "03", name: "Sentinel", description: "An AI clinical companion for medical professionals that measures cognitive baselines and shift fatigue through reaction, memory, and typing tests with Gemini-powered feedback.", href: "https://sentinel-lyart.vercel.app", image: "/imgae/projects/sentinel.png", tags: ["Next.js", "Gemini AI", "HealthTech"] },
+  { id: "04", name: "DorcMeet", description: "A discreet campus social app for Babcock students with swipe discovery, secret crushes, realtime chat, WebRTC voice and video calls, consent-based live location finding, and group hangouts.", href: "https://dorcmeet.com", image: "/imgae/projects/dorcmeet.png", tags: ["React", "TypeScript", "Supabase"] }
 ];
 
 const skills = [
@@ -83,7 +84,7 @@ function Work() {
   return (
     <section id="work" className="work section-shell">
       <div className="work-heading"><div className="section-number reveal">02 / Selected work</div><h2 className="section-title reveal">Things I’ve<br /><em>brought to life.</em></h2><p className="reveal">A selection of products, prototypes, and explorations built to solve real problems.</p></div>
-      <div className="projects">{projects.map((project, i) => <article className={`project reveal${i === 0 ? " project-featured" : ""}`} data-tilt key={project.name}><a href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.name} live`}><ProjectVisual project={project} /><div className="project-meta"><div><h3>{project.name}</h3><p>{project.description}</p></div><div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></a></article>)}</div>
+      <div className="projects">{projects.map((project, i) => <article className={`project reveal${i === 0 || (i === projects.length - 1 && projects.length % 2 === 0) ? " project-featured" : ""}`} data-tilt key={project.name}><a href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.name} live`}><ProjectVisual project={project} /><div className="project-meta"><div><h3>{project.name}</h3><p>{project.description}</p></div><div className="project-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></a></article>)}</div>
       <a className="all-work-link reveal" href="https://github.com/samog76?tab=repositories" target="_blank" rel="noreferrer"><span>View all projects</span><i>↗</i></a>
     </section>
   );
